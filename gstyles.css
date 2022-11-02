@@ -3,22 +3,20 @@
     margin: 0;
 }
 
-.topnav {
+#header {
     overflow: hidden;
-    background-color: rgb(211, 211, 211);
-    position: relative;
+    background-color: #2a6dcc;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-#links a{
-    color:black
+    width: 100%;
 }
   
 .topnav #links {
+    text-align: center;
     display: none;
-    background-color: rgb(233, 233, 233);
+    background-color: #14468A;
 
 }
   
@@ -31,43 +29,56 @@
 }
   
 .topnav a.icon {
-    background: rgb(211, 211, 211);
+    background: #2a6dcc;
     display: block;
     position: absolute;
     right: 0;
     top: 0;
+    padding: 21px;
 }
   
 .topnav a:hover {
-    background-color: rgb(233, 233, 233);
+    background-color:#14468A;
     color: black;
 }
   
-.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-body{
-    text-align:center;
-    color:black;
-}
-.topnav img{
+#header img{
     margin-left: 40px;
-    max-width:230px;
+    max-width:270px;
 }
 
 .img{
-    margin: 70px;
     border: 1px solid black;
     width: 100px;
     height: 100px;
     background-color: aqua;
     
 }
-.galerii{
-    background-color: red;
+#galerii{
+    z-index: 2;
+    padding: 80px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 5px;
+    max-height: 130px;
+    overflow: hidden;
+	transition: max-height 0.7s;
+}
+
+#galerii.open {
+	max-height: 1000px;
+	transition: max-height 0.7s;
+}
+
+#show-more {
+    width: 20%;
+    background: #2a6dcc;
+    color: white;
+	font-family: sans-serif;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	padding: 15px;
+    margin: 10px auto;
 }
